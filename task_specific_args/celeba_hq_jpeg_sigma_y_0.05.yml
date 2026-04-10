@@ -1,0 +1,22 @@
+degradation:
+    jpeg_qf: 5
+    
+hyperparameters:
+    iN: 250
+    gamma: 0.3
+    deltas: "0.1,0.1,0.2,4.0"
+    rhos: "-2.5,2.5"
+    mu_0: 0.05
+    T_sampling: 4
+
+checkpoint:
+    model_ckpt: "celeba_hq/ema_0.9999432189950708_1175000.pt"
+
+config_file:
+    config: celeba_hq_256.yml
+
+dc_optimizer:
+    opt_type: "SGD"
+    opt_lr: 5e-4
+    opt_num_iter: 100
+    opt_decay_rate: 0.8

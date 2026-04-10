@@ -1,0 +1,16 @@
+degradation:
+    inpainting_mask_path: "random_70_mask.npy"
+    
+hyperparameters:
+    iN: 100
+    gamma: 0.1
+    deltas: "0.3,0.2,0.8,0.8"
+    rhos: "-6.0,12.0"
+    mu_0: 0.05
+    T_sampling: 4
+
+checkpoint:
+    model_ckpt: "celeba_hq/ema_0.9999432189950708_1175000.pt"
+
+config_file:
+    config: celeba_hq_256.yml

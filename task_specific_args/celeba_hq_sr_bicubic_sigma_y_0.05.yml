@@ -1,0 +1,16 @@
+degradation:
+    deg_scale: 4
+    
+hyperparameters:
+    iN: 150
+    gamma: 0.2
+    deltas: "0.3,0.05,0.2,0.2"
+    rhos: "-4.0,4.0"
+    mu_0: 0.2
+    T_sampling: 4
+
+checkpoint:
+    model_ckpt: "celeba_hq/ema_0.9999432189950708_1175000.pt"
+
+config_file:
+    config: celeba_hq_256.yml

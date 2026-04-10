@@ -1,0 +1,18 @@
+degradation:
+    acc_rate: 4
+    acs_lines: 24
+    us_pattern: "gaussian1d"
+    
+hyperparameters:
+    iN: 50
+    gamma: 0.1
+    deltas: "0.2,3.0,4.0,2.5"
+    rhos: "-2.5,-0.5"
+    mu_0: 0.05
+    T_sampling: 4
+
+checkpoint:
+    model_ckpt: "fast_mri/ema_0.9999432189950708_700000_cm_knee.pt"
+
+config_file:
+    config: fast_mri_320.yml

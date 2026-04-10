@@ -1,0 +1,19 @@
+hyperparameters:
+    iN: 250
+    gamma: 0.03
+    deltas: "0.5,0.1,0.1,0.1,0.1,0.1,0.2,0.2"
+    rhos: "-5.0,-0.5"
+    mu_0: 0.2
+    T_sampling: 8
+
+checkpoint:
+    model_ckpt: "celeba_hq/ema_0.9999432189950708_1175000.pt"
+
+config_file:
+    config: celeba_hq_256.yml
+
+dc_optimizer:
+    opt_type: "SGD"
+    opt_lr: 0.4
+    opt_num_iter: 1000
+    opt_decay_rate: 0.95

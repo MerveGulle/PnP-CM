@@ -1,0 +1,22 @@
+# python
+__pycache__/
+*.pyc
+
+# environments
+.env
+.venv
+conda-env/
+
+# nonlinear deblur files
+bkse/
+
+# datasets
+exp/datasets/
+
+# checkpoints
+exp/logs/
+*.pt
+*.ckpt
+
+# ignore generated sample images
+exp/image_samples/
