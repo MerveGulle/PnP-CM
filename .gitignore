@@ -11,9 +11,6 @@ conda-env/
 # nonlinear deblur files
 bkse/
 
-# datasets
-exp/datasets/
-
 # checkpoints
 exp/logs/
 *.pt
