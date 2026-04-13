@@ -1,8 +1,10 @@
 # PnP-CM: Consistency Models as Plug-and-Play Priors for Inverse Problems (CVPR 2026) #
 
 [Merve Gulle](https://scholar.google.com/citations?user=Pmu-yJYAAAAJ&hl=en), [Junno Yun](https://scholar.google.com/citations?user=Ou4ff9kAAAAJ&hl=en&oi=ao), [Yasar Utku Alcalar](https://scholar.google.com/citations?user=9N2YMjEAAAAJ&hl=en&oi=ao), [Mehmet Akcakaya](https://scholar.google.com/citations?user=x-q3XC4AAAAJ&hl=en&oi=ao), University of Minnesota
+<p align="center">
+  <img src="figs/recon_example.jpg" width="800">
+</p>
 
----
 
 # Installation #
 
