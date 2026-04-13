@@ -50,8 +50,13 @@ Please download and place the pre-trained models under: ./exp/logs/fast_mri/
 ./exp/logs/fast_mri/
 ```
 
+### 4. Set up Nonlinear Deblurring
+We use the external codes for non-linear deblurring. Please clone the following repo under the main directory:
+```bash
+git clone https://github.com/VinAIResearch/blur-kernel-space-exploring bkse
+```
 
-### 4. Datasets
+### 5. Datasets
 
 #### CelebA-HQ
 
