@@ -37,7 +37,7 @@ Please download and place the pre-trained models under: ./exp/logs/celeba_hq/
 ```
 
 #### LSUN Bedroom
-Pre-trained CM model is available at the following [link]([https://www.dropbox.com/scl/fo/l5q06udyq1zbg2rhjbvvm/AFSAMaZbHmJNG1Nd1qyJ-Ko?rlkey=h2np6dpba8tnnv3pc66ew5o7x&dl=0](https://openaipublic.blob.core.windows.net/consistency/cd_cat256_lpips.pt)). \
+Pre-trained CM model is available at the following [link](https://openaipublic.blob.core.windows.net/consistency/cd_cat256_lpips.pt). \
 Please download and place the pre-trained models under: ./exp/logs/lsun_bedroom/
 ```bash
 ./exp/logs/lsun_bedroom/
