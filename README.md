@@ -31,24 +31,15 @@ For **LSUN Bedroom**, we used the official pre-trained Consistency Models provid
 
 #### CelebA-HQ
 Pre-trained CM model is available at the following [link](https://www.dropbox.com/scl/fo/l5q06udyq1zbg2rhjbvvm/AFSAMaZbHmJNG1Nd1qyJ-Ko?rlkey=h2np6dpba8tnnv3pc66ew5o7x&dl=0). \
-Please download and place the pre-trained models under:
-```bash
-./exp/logs/celeba_hq/
-```
+Please download and place the pre-trained models under: `./exp/logs/celeba_hq/`
 
 #### LSUN Bedroom
 Pre-trained CM model is available at the following [link](https://openaipublic.blob.core.windows.net/consistency/cd_bedroom256_lpips.pt). \
-Please download and place the pre-trained models under:
-```bash
-./exp/logs/lsun_bedroom/
-```
+Please download and place the pre-trained models under: `./exp/logs/lsun_bedroom/`
 
 #### Fast MRI (knee)
 Pre-trained CM model is available at the following [link](https://www.dropbox.com/scl/fo/l5q06udyq1zbg2rhjbvvm/AFSAMaZbHmJNG1Nd1qyJ-Ko?rlkey=h2np6dpba8tnnv3pc66ew5o7x&dl=0). \
-Please download and place the pre-trained models under:
-```bash
-./exp/logs/fast_mri/
-```
+Please download and place the pre-trained models under: `./exp/logs/fast_mri/`
 
 ### 4. Set up Nonlinear Deblurring
 We use the external codes for non-linear deblurring. Please clone the following repo under the main directory:
@@ -60,17 +51,11 @@ git clone https://github.com/VinAIResearch/blur-kernel-space-exploring bkse
 
 #### CelebA-HQ
 You can download the CelebA-HQ dataset that we used for validation in the paper from this [link](https://drive.google.com/drive/folders/1RBK-ikwjddi24gotrlg2XdJUoBFnhHs3?usp=drive_link).
-Please place the dataset under:
-```bash
-./exp/datasets/celeba_hq/celeba_hq
-```
+Please place the dataset under `./exp/datasets/celeba_hq/celeba_hq`
 
 #### LSUN Bedroom
 You can download the bedroom dataset that we used for validation in the paper from this [link](https://drive.google.com/drive/folders/1fTmt6-o03KmaFmz32rd44QoOI43m8IVG?usp=drive_link).
-Please place the dataset under:
-```bash
-./exp/datasets/lsun_bedroom/bedroom
-```
+Please place the dataset under: `./exp/datasets/lsun_bedroom/bedroom`
 
 #### Fast MRI knee
 Please download the **fastMRI** dataset from [fastMRI](https://fastmri.med.nyu.edu/) after agreeing to the data use agreement.
@@ -102,7 +87,7 @@ coils   # shape: (C, H, W)
 
 ## Quick Start
 
-Supported degradations in this repository:
+#### Supported degradations in this repository:
 
 - `deblur_gauss`   : Gaussian deblurring
 - `inpainting`     : Random inpainting (70%)
@@ -115,14 +100,33 @@ Use the following commands to generate PnP-CM results:
 
 #### CelebA-HQ
 ```bash
-python main.py --deg={deg} --path_y='celeba_hq' --sigma_y=0.05 --config='celeba_hq_256.yml' --model_ckpt='celeba_hq/ema_0.9999432189950708_1175000.pt' --save_y
+python main.py --deg={degradation} --path_y='celeba_hq' --sigma_y=0.05 --config='celeba_hq_256.yml' --model_ckpt='celeba_hq/ema_0.9999432189950708_1175000.pt' --save_y
 ```
 #### LSUN Bedroom
 ```bash
-python main.py --deg={deg} --path_y='bedroom' --sigma_y=$sigma_y --config='lsun_bedroom_256.yml' --model_ckpt='lsun_bedroom/cd_bedroom256_lpips.pt' --save_y
+python main.py --deg={degradation} --path_y='bedroom' --sigma_y=$sigma_y --config='lsun_bedroom_256.yml' --model_ckpt='lsun_bedroom/cd_bedroom256_lpips.pt' --save_y
 ```
 #### Fast MRI knee
 ```bash
 python main.py --deg='fastmri' --path_y={path_y} --acc_rate=4 --acs_lines=24 --us_pattern=gaussian1d --sigma_y=0.0 --config='fastmri_320.yml' --model_ckpt=fast_mri/ema_0.9999432189950708_700000_cm_knee.pt --save_y
 ```
 
+#### Hyperparameters:
+The method uses a small set of hyperparameters that control the sampling trajectory and an inner optimization loop (for nonlinear problems).
+
+We provide the hyperparameters used in the main paper for CelebA-HQ and FastMRI experiments under `./task_specific_args`, which are automatically loaded by the code. 
+
+For other tasks or custom configurations, the following hyperparameters can be adjusted:
+##### Sampling / noise schedule
+- `iN`        : Initial noise level
+- `gamma`     : Noise level decay rate
+- `deltas`    : A comma separated list of the delta hyperparameters, sigma_cm[n]=sigma[n]*(1+delta[n])
+- `rhos`      : A comma separated list of the rho hyperparameters, penalty parameters
+- `mu_0`      : Initial momentum
+- `T_sampling`: Number of iterations / NFEs
+
+##### Optimization parameters (nonlinear inverse problems only)
+- `opt_type`       : Optimization type, 'Adam', 'SGD', etc.
+- `opt_lr`         : Learning rate
+- `opt_num_iter`   : Number of iterations
+- `opt_decay_rate` : Decay rate of the learning rate
