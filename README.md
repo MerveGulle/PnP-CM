@@ -31,21 +31,21 @@ For **LSUN Bedroom**, we used the official pre-trained Consistency Models provid
 
 #### CelebA-HQ
 Pre-trained CM model is available at the following [link](https://www.dropbox.com/scl/fo/l5q06udyq1zbg2rhjbvvm/AFSAMaZbHmJNG1Nd1qyJ-Ko?rlkey=h2np6dpba8tnnv3pc66ew5o7x&dl=0). \
-Please download and place the pre-trained models under: ./exp/logs/celeba_hq/
+Please download and place the pre-trained models under:
 ```bash
 ./exp/logs/celeba_hq/
 ```
 
 #### LSUN Bedroom
-Pre-trained CM model is available at the following [link](https://openaipublic.blob.core.windows.net/consistency/cd_cat256_lpips.pt). \
-Please download and place the pre-trained models under: ./exp/logs/lsun_bedroom/
+Pre-trained CM model is available at the following [link](https://openaipublic.blob.core.windows.net/consistency/cd_bedroom256_lpips.pt). \
+Please download and place the pre-trained models under:
 ```bash
 ./exp/logs/lsun_bedroom/
 ```
 
 #### Fast MRI (knee)
 Pre-trained CM model is available at the following [link](https://www.dropbox.com/scl/fo/l5q06udyq1zbg2rhjbvvm/AFSAMaZbHmJNG1Nd1qyJ-Ko?rlkey=h2np6dpba8tnnv3pc66ew5o7x&dl=0). \
-Please download and place the pre-trained models under: ./exp/logs/fast_mri/
+Please download and place the pre-trained models under:
 ```bash
 ./exp/logs/fast_mri/
 ```
@@ -59,8 +59,18 @@ git clone https://github.com/VinAIResearch/blur-kernel-space-exploring bkse
 ### 5. Datasets
 
 #### CelebA-HQ
+You can download the bedroom dataset that we used for validation in the paper from this [link](https://drive.google.com/drive/folders/1RBK-ikwjddi24gotrlg2XdJUoBFnhHs3?usp=drive_link).
+Please place the dataset under:
+```bash
+./exp/datasets/celeba_hq/celeba_hq
+```
 
 #### LSUN Bedroom
+You can download the bedroom dataset that we used for validation in the paper from this [link](https://drive.google.com/drive/folders/1fTmt6-o03KmaFmz32rd44QoOI43m8IVG?usp=drive_link).
+Please place the dataset under:
+```bash
+./exp/datasets/lsun_bedroom/bedroom
+```
 
 #### Fast MRI knee
 Please download the **fastMRI** dataset from [fastMRI](https://fastmri.med.nyu.edu/) after agreeing to the data use agreement.
