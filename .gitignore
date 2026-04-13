@@ -11,6 +11,9 @@ conda-env/
 # nonlinear deblur files
 bkse/
 
+# differentiable jpeg compressio files
+functions/diff_jpeg/
+
 # checkpoints
 exp/logs/
 *.pt
