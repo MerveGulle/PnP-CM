@@ -59,7 +59,7 @@ git clone https://github.com/VinAIResearch/blur-kernel-space-exploring bkse
 ### 5. Datasets
 
 #### CelebA-HQ
-You can download the bedroom dataset that we used for validation in the paper from this [link](https://drive.google.com/drive/folders/1RBK-ikwjddi24gotrlg2XdJUoBFnhHs3?usp=drive_link).
+You can download the CelebA-HQ dataset that we used for validation in the paper from this [link](https://drive.google.com/drive/folders/1RBK-ikwjddi24gotrlg2XdJUoBFnhHs3?usp=drive_link).
 Please place the dataset under:
 ```bash
 ./exp/datasets/celeba_hq/celeba_hq
@@ -101,6 +101,16 @@ coils   # shape: (C, H, W)
 
 
 ## Quick Start
+
+Supported degradations in this repository:
+
+- `deblur_gauss`   : Gaussian deblurring
+- `inpainting`     : Random inpainting (70%)
+- `sr_bicubic`     : Bicubic super-resolution (x4)
+- `deblur_nl`      : Non-linear deblurring
+- `jpeg`           : JPEG compression with quality factor (QF) 5
+- `phase_retrieval`: Phase retrieval
+
 Use the following commands to generate PnP-CM results:
 
 #### CelebA-HQ
@@ -115,3 +125,4 @@ python main.py --deg={deg} --path_y='bedroom' --sigma_y=$sigma_y --config='lsun_
 ```bash
 python main.py --deg='fastmri' --path_y={path_y} --acc_rate=4 --acs_lines=24 --us_pattern=gaussian1d --sigma_y=0.0 --config='fastmri_320.yml' --model_ckpt=fast_mri/ema_0.9999432189950708_700000_cm_knee.pt --save_y
 ```
+
