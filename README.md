@@ -47,7 +47,20 @@ We use the external codes for non-linear deblurring. Please clone the following 
 git clone https://github.com/VinAIResearch/blur-kernel-space-exploring bkse
 ```
 
-### 5. Datasets
+### 5. Set up JPEG Compression
+We use the external codes for differentiable JPEG compression. Please clone `diff_jpeg` folder the following repo under: `./functions/`
+```bash
+cd functions
+git clone --depth 1 --filter=blob:none --sparse https://github.com/necla-ml/Diff-JPEG.git
+cd Diff-JPEG
+git sparse-checkout set diff_jpeg
+mv diff_jpeg ../
+cd ..
+rm -rf Diff-JPEG
+cd ..
+```
+
+### 6. Datasets
 
 #### CelebA-HQ
 You can download the CelebA-HQ dataset that we used for validation in the paper from this [link](https://drive.google.com/drive/folders/1RBK-ikwjddi24gotrlg2XdJUoBFnhHs3?usp=drive_link).
