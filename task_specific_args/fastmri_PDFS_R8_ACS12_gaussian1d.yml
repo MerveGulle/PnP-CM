@@ -1,5 +1,5 @@
 degradation:
-    acc_rate: 4
+    acc_rate: 8
     acs_lines: 12
     us_pattern: "gaussian1d"
     

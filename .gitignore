@@ -21,3 +21,6 @@ exp/logs/
 
 # ignore generated sample images
 exp/image_samples/
+
+# datasets
+exp/datasets/fastMRI_full/

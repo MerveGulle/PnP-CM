@@ -89,7 +89,7 @@ def pnp_cm_fastmri_restoration(
         xt_1 = xt.clone()
         ut_1 = ut.clone()
         
-        zt = A_funcs.CG(ATy, penalty_param[iter_ind] * (xt_moment-ut_moment), penalty_param[iter_ind], cg_iter=10)
+        zt = A_funcs.CG(ATy, (xt_moment-ut_moment), penalty_param[iter_ind], cg_iter=10)
         
         z_noisy = zt + ut_moment + torch.randn_like(xt_moment) * sigma_t_i[0]
         
