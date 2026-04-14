@@ -1,4 +1,5 @@
 # PnP-CM: Consistency Models as Plug-and-Play Priors for Inverse Problems (CVPR 2026) #
+[![arXiv](https://img.shields.io/badge/arXiv-2301.01234-red.svg)](https://arxiv.org/pdf/2509.22736)
 
 [Merve Gulle](https://scholar.google.com/citations?user=Pmu-yJYAAAAJ&hl=en), [Junno Yun](https://scholar.google.com/citations?user=Ou4ff9kAAAAJ&hl=en&oi=ao), [Yasar Utku Alcalar](https://scholar.google.com/citations?user=9N2YMjEAAAAJ&hl=en&oi=ao), [Mehmet Akcakaya](https://scholar.google.com/citations?user=x-q3XC4AAAAJ&hl=en&oi=ao), University of Minnesota
 <p align="center">
@@ -143,3 +144,21 @@ For other tasks or custom configurations, the following hyperparameters can be a
 - `opt_lr`         : Learning rate
 - `opt_num_iter`   : Number of iterations
 - `opt_decay_rate` : Decay rate of the learning rate
+
+
+## Acknowledgements
+
+This codebase is mainly built upon [CM4IR](https://github.com/tirer-lab/CM4IR) repository.
+
+## 📝 Citation
+If you find this repository useful in your research, please consider citing our work:
+```bibtex
+
+@inproceedings{gulle2026_CVPR,
+  title     = {{PnP-CM}: {C}onsistency models as plug-and-play priors for inverse problems},
+  author    = {G{\"u}lle, Merve and Yun, Junno and Al{\c{c}}alar, Ya{\c{s}}ar Utku and Ak{\c{c}}akaya, Mehmet},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recog.},
+  year      = 2026,
+}
+
+```
