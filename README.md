@@ -31,7 +31,7 @@ We provide pre-trained CM models for the **CelebA-HQ** and **fastMRI knee** data
 For **LSUN Bedroom**, we used the official pre-trained Consistency Models provided by OpenAI in the [CM repo](https://github.com/openai/consistency_models?tab=readme-ov-file#pre-trained-models).\
 
 #### CelebA-HQ
-Pre-trained CM model is available at the following [link](https://www.dropbox.com/scl/fo/l5q06udyq1zbg2rhjbvvm/AFSAMaZbHmJNG1Nd1qyJ-Ko?rlkey=h2np6dpba8tnnv3pc66ew5o7x&dl=0). \
+Pre-trained CM model is available at the following [link](https://www.dropbox.com/scl/fo/dfc0ve8uqxvnyrpol40im/ALbVuJFCgQRL-ZH9hW9W7xY?rlkey=orcpl3mmlqf5okglla84yisny&dl=0). \
 Please download and place the pre-trained models under: `./exp/logs/celeba_hq/`
 
 #### LSUN Bedroom
